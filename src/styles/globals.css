@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink-950 text-slate-100 antialiased;
+}
+
+::selection {
+  @apply bg-gold-500/30 text-white;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  @apply relative rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl;
+}
+
+.glass-card::before {
+  content: "";
+  @apply absolute inset-0 rounded-2xl pointer-events-none;
+  background: linear-gradient(
+    135deg,
+    rgba(232, 185, 74, 0.08),
+    transparent 40%,
+    rgba(61, 130, 246, 0.06)
+  );
+}
+
+/* Section heading eyebrow */
+.eyebrow {
+  @apply inline-block text-xs font-semibold uppercase tracking-[0.2em] text-gold-400/90;
+}
+
+/* Gradient text */
+.text-gradient {
+  @apply bg-gradient-to-r from-gold-400 via-gold-500 to-azure-400 bg-clip-text text-transparent;
+}
+
+/* Animated grid background */
+.bg-animated-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* Premium button */
+.btn-primary {
+  @apply relative inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-gold-500 to-gold-400 px-7 py-3.5 text-sm font-semibold text-ink-950 transition-all duration-300 ease-out;
+  box-shadow: 0 0 0 0 rgba(232, 185, 74, 0.5);
+}
+
+.btn-primary:hover {
+  @apply scale-[1.03];
+  box-shadow: 0 0 30px 4px rgba(232, 185, 74, 0.45);
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.02] px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 ease-out hover:border-azure-400/50 hover:bg-white/[0.06] hover:shadow-glow-blue;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-ink-950;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-ink-600;
+}
