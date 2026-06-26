@@ -82,12 +82,24 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.15 }}
         >
           <GlassCard className="mx-auto max-w-md p-6 sm:p-8" glow="gold">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
-              Global Solution Partners
-            </p>
-            <p className="mt-1 text-lg font-semibold text-foreground">
-              Intelligence Engine
-            </p>
+            <div className="flex items-center gap-4">
+              <video
+                src="/images/logo-animation.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="glow-gold h-16 w-16 shrink-0 rounded-full object-cover sm:h-20 sm:w-20"
+              />
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold">
+                  Global Solution Partners
+                </p>
+                <p className="mt-1 text-lg font-semibold text-foreground">
+                  Intelligence Engine
+                </p>
+              </div>
+            </div>
 
             <div className="mt-6 flex flex-col gap-3">
               {engineItems.map((item, i) => (
