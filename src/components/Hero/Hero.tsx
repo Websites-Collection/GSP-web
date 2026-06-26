@@ -12,15 +12,15 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden bg-ink-950 pb-24 pt-36 lg:pb-32 lg:pt-44"
+      className="relative isolate overflow-hidden bg-ink-950 pb-24 pt-36 lg:pb-32 lg:pt-44"
     >
       {/* Background image layer */}
       <div className="absolute inset-0 -z-20">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-40"
-          style={{ backgroundImage: "url('/background.jpg')" }}
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/background.png')" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink-950/60 via-ink-950/85 to-ink-950" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink-950/20 via-ink-950/40 to-ink-950" />
       </div>
 
       {/* Animated grid */}

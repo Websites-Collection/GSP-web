@@ -4,7 +4,7 @@ export const siteConfig = {
   description:
     "Global Solutions Partner helps financial advisors, retirement specialists, pension review professionals, real estate businesses, and service companies generate qualified appointments through verified prospect data, outreach workflows, qualification, and calendar booking across the US and UK.",
   url: "https://www.globalsolutionspartner.com",
-  ogImage: "/background.jpg",
+  ogImage: "/background.png",
 };
 
 export const organizationSchema = {
