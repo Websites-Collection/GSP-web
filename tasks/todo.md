@@ -16,3 +16,17 @@
 
 Verified by sampling the rendered output at 1 fps across the full duration: no
 residual English caption pixels, all 26 Filipino cues render in-band and in-time.
+
+## Follow-up: Filipino voiceover
+
+- [x] Synthesise a Filipino VO with Meta MMS Tagalog TTS (`facebook/mms-tts-tgl`)
+- [x] Fit each of the 10 lines to its caption window (atempo 1.00–1.30, no line badly rushed)
+- [x] Mix over the original audio ducked to 16%, limited at 0.95
+- [x] Verify every line lands inside its window and levels sit at -15..-21 dBFS with no clipping
+- [x] Verify `make_vo.py` reproduces the deliverable end-to-end
+
+Added `basketball-role-reel-fil-vo.mp4` alongside the captions-only cut, plus
+`voiceover-fil.md` and `make_vo.py`.
+
+Not verified by ear — the voice is synthetic and was checked by timing and level
+analysis only.
